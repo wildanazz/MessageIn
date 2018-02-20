@@ -23,3 +23,8 @@ def send_new(request):
             return redirect('index')
     else:
         return redirect('index')
+
+def delete_message(request, id):
+    message = Send.objects.get(id=id)
+    message.delete()
+    return redirect('index')

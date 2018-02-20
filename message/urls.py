@@ -9,4 +9,5 @@ urlpatterns = [
     url('^index/$',TemplateView.as_view(template_name='index.html')),
     url(r'^$', views.index, name='index'),
     url(r'^send_new', views.send_new, name='send_new'),
+    url(r'^delete_message/(?P<id>\d+)/$', views.delete_message, name='delete_message'),
 ]

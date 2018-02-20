@@ -54,6 +54,12 @@
                             <div class="message-text">
                                 {{send.text}}
                             </div>
+                            <div>
+                                <form action="{% url 'delete_message' send.id %}">
+                                    <input type="submit" class="btn btn-danger" value="Delete">
+                                </form>
+                            </div>
+                            
                         </div>  
                     {% endfor %}       
                 </div>
