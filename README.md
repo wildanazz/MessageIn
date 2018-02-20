@@ -15,9 +15,9 @@ Steps:
 2. Navigasi ke project MessageIn dengan command-line,    
           cd d/MessageIn 
 3. Buat local environment (myenv atau bisa nama lain), 
-          python -m venv myanotherenv
+          python -m venv myenv
 4. Aktifkan local environment dari project MessageIn,
-          myanotherenv/Scripts/activate
+          myenv/Scripts/activate
 5. Download dan install django serta requirements lainnya yang dibutuhkan untuk menjalankan web di local server,
           pip install -r requirements.txt
 5. Step terakhir adalah menjalankan web tersebut di local server pc kalian,
