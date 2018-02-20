@@ -107,7 +107,7 @@ section{
 }
 
 #send-message{
-    background-image: url('/static/images/background.jpg');
+    background-image: url('/static/images/backgroundmessage.jpg');
     box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
     box-sizing: border-box;
     border-radius: 3px;
