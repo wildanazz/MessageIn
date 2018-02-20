@@ -1,0 +1,1 @@
+Buka README.md dengan menggunakan text editor (Notepad, visual studio code dll)

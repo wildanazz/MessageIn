@@ -1,0 +1,184 @@
+.header-fixed {
+	background-color: #2C3E50;
+	box-shadow:0 1px 1px #292c2f;
+	padding: 20px 40px;
+	height: 80px;
+	color: #ffffff;
+	box-sizing: border-box;
+	top:-100px;
+}
+
+.header-fixed .header-limiter {
+	max-width: 1200px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.header-fixed-placeholder{
+	height: 80px;
+	display: none;
+}
+
+.header-fixed .header-limiter h1 {
+	float: left;
+	font: normal 28px Cookie, 'Lobster', cursive;
+	line-height: 40px;
+	margin: 0;
+}
+
+.header-fixed .header-limiter h1 span {
+	color: #5383d3;
+}
+
+.header-fixed .header-limiter a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.header-fixed .header-limiter nav {
+	font:16px 'Lobster', cursive;
+	line-height: 40px;
+	float: right;
+}
+
+.header-fixed .header-limiter nav a{
+	display: inline-block;
+	padding: 0 5px;
+	text-decoration:none;
+	color: #ffffff;
+	opacity: 0.9;
+}
+
+.header-fixed .header-limiter nav a:hover{
+	opacity: 1;
+}
+
+.header-fixed .header-limiter nav a.selected {
+	color: #608bd2;
+	pointer-events: none;
+	opacity: 1;
+}
+
+body.fixed .header-fixed {
+	padding: 10px 40px;
+	height: 50px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+body.fixed .header-fixed-placeholder {
+	display: block;
+}
+
+body.fixed .header-fixed .header-limiter h1 {
+	font-size: 24px;
+	line-height: 30px;
+}
+
+body.fixed .header-fixed .header-limiter nav {
+	line-height: 28px;
+	font-size: 13px;
+}
+
+.footer {
+    padding: 20px;
+    background-color: #2C3E50;
+    text-align: center;
+    font: normal 28px Cookie, 'Lobster', cursive;
+}
+
+.footer .copyright {
+	line-height: 1.6;
+	color: #ffffff;
+	text-align: center;
+    font-size: 16px; 
+}
+
+.footer .fa-heart {
+	color: #FB866A; 
+}
+
+section{
+    min-height: 500px;
+    padding: 15px;
+}
+
+#send-message{
+    background-image: url('/static/images/background.jpg');
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+    border-radius: 3px;
+    position: relative;
+}
+
+#send-message form > h2{
+    font:1.3em 'Lobster', cursive;
+    text-align: center;
+    text-transform: uppercase;
+    color: #2C3E50;
+    margin-bottom: 10px;
+}
+
+textarea {
+    resize:none
+}
+
+#send-message form{
+    width: 400px;
+    margin: 50px auto;
+    text-align: center;
+    background: #ffffff;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#send-message form > .sender-form, #send-message form > .receiver-form, #send-message form > .text-form{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #2C3E50;
+    font:1.3em 'Lobster', cursive;
+    padding: 15px;
+}
+
+#send-list {
+    background-color: silver
+}
+
+#send-list .title > h2{
+    font:40px 'Lobster', cursive;
+    text-align: center;
+    text-transform: uppercase;
+    color: #2C3E50;
+    margin-bottom: 10px;
+}
+
+.message{
+    font:1.3em 'Lobster', cursive;
+    margin: 50px 50px;
+    background: #ffffff;
+    box-sizing: border-box;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 25px 25px;
+}
+
+.message .message-sender {
+    padding: 10px 10px;
+}
+
+.message .message-receiver {
+    padding: 10px 10px;  
+}
+
+.message .message-text {
+    padding: 10px 10px;
+    text-align: justify;
+    overflow: auto;
+}

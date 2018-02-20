@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <!-- Meta -->
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title> MessageIn </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" content="MessageIn (Tugas Eksplorasi)"/>
+        <!-- Non Project CSS -->
+        <link type='text/css' rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link type='text/css' rel='stylesheet' href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext'>
+        <link  type='text/css'rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Project CSS -->
+        <link rel="stylesheet" href="{% static 'css/message.css' %}">
+        <!-- Favicon -->
+		<link rel="icon" href="{% static 'favicon.png' %}">
+    </head>
+    <body>
+        <!-- Header -->
+		<header class="header-fixed">
+            <div class="header-limiter">
+                <h1><a href="#">Message<span>In</span></a></h1>
+            </div>
+            <div class="header-fixed-placeholder"></div>
+        </header>
+        <!-- Form Message Content -->
+        <section name="send-message" id="send-message">       
+            <form id="form" method="POST" action="{% url 'send_new' %}">
+                <h2>New Message</h2>
+                {% csrf_token %}
+                {{ SendForm }}
+                <input type="submit" class="btn btn-lg btn-block btn-info" style="color:#ffffff; background-color: #608bd2; border-color:#608bd2" value="Send">
+                <br>
+            </form>  
+        </section>
+        <!-- Message Lists -->
+        <section name="send-list" id="send-list">
+            <div class="title">
+                <h2>Messages</h2>
+                <div>
+                    {% for send in sends reversed%}     
+                        <div class="message">
+                            From:
+                            <div class="message-sender">
+                                {{send.sender}}
+                            </div>
+                            To:
+                            <div class="message-receiver"> 
+                                {{send.receiver}}
+                            </div>
+                            Message:
+                            <div class="message-text">
+                                {{send.text}}
+                            </div>
+                        </div>  
+                    {% endfor %}       
+                </div>
+            </div>
+        </section>  
+        <!-- Footer -->
+		<footer class="footer">
+            <small class="copyright">
+            Created with
+            <i class="fa fa-heart" aria-hidden="true"></i>
+            by
+            <p>Muhammad Wildan Aziz</p>
+            </small>
+        </footer>
+    </body>
+    <!-- JavaScript -->
+	<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-3753241-1");
+    pageTracker._initData();
+    pageTracker._trackPageview();
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var showHeaderAt = 150;
+            var win = $(window),
+            body = $('body');
+            if(win.width() > 600){
+                win.on('scroll', function(e){
+                    if(win.scrollTop() > showHeaderAt) {
+                        body.addClass('fixed');
+                    }
+                    else {
+                        body.removeClass('fixed');
+                    }
+                });
+            }
+        });
+    </script>
+</html>
